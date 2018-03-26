@@ -15,10 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
+    @IBOutlet weak var loginButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // sets the title of the button
+        loginButton.setTitle("Enter", for: UIControlState.normal)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -36,6 +40,7 @@ class ViewController: UIViewController {
                     if user != nil {
                         // user sucessfully signs in
                         print("Sucessfully signed in!")
+                        self.performSegue(withIdentifier: "segue", sender: self)
                     } else {
                         
                         if let myError = error?.localizedDescription {
@@ -47,12 +52,14 @@ class ViewController: UIViewController {
                     }
                     
                 })
-            } else {
+            } else if segmentControl.selectedSegmentIndex == 1 {
                 //signUp
                 Auth.auth().createUser(withEmail: emailInput.text!, password: passwordInput.text!, completion: { (user, error) in
                     
+                    self.loginButton.setTitle("Sign Up", for: UIControlState.normal)
+                    
                     if user != nil {
-                        print("Sucessfully signed up!")
+                        self.performSegue(withIdentifier: "segue", sender: self)
                     } else {
                         
                         if let myError = error?.localizedDescription {
@@ -67,6 +74,11 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
+//    Cinema button
+    
+    
     
 }
 

@@ -13,6 +13,8 @@
 		27BD26332068631200A50DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BD26322068631200A50DB8 /* Assets.xcassets */; };
 		27BD26362068631200A50DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BD26342068631200A50DB8 /* LaunchScreen.storyboard */; };
 		27BD263E2068646600A50DB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27BD263D2068646600A50DB8 /* GoogleService-Info.plist */; };
+		27BD264020686FFB00A50DB8 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD263F20686FFB00A50DB8 /* ViewController2.swift */; };
+		27BD26422068855E00A50DB8 /* ViewControllerCinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BD26412068855E00A50DB8 /* ViewControllerCinema.swift */; };
 		52E1152933C8382FE686FFCE /* Pods_myMovie2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBE276B771C1A5C5CB9868C /* Pods_myMovie2.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		27BD26352068631200A50DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27BD26372068631200A50DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27BD263D2068646600A50DB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		27BD263F20686FFB00A50DB8 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		27BD26412068855E00A50DB8 /* ViewControllerCinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCinema.swift; sourceTree = "<group>"; };
 		450DE908DC08A8B8AAC8D677 /* Pods-myMovie2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myMovie2.release.xcconfig"; path = "Pods/Target Support Files/Pods-myMovie2/Pods-myMovie2.release.xcconfig"; sourceTree = "<group>"; };
 		6C648D77E870D69555334ADD /* Pods-myMovie2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myMovie2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myMovie2/Pods-myMovie2.debug.xcconfig"; sourceTree = "<group>"; };
 		BBBE276B771C1A5C5CB9868C /* Pods_myMovie2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myMovie2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,8 @@
 				27BD262B2068631200A50DB8 /* AppDelegate.swift */,
 				27BD262D2068631200A50DB8 /* ViewController.swift */,
 				27BD262F2068631200A50DB8 /* Main.storyboard */,
+				27BD26412068855E00A50DB8 /* ViewControllerCinema.swift */,
+				27BD263F20686FFB00A50DB8 /* ViewController2.swift */,
 				27BD26322068631200A50DB8 /* Assets.xcassets */,
 				27BD26342068631200A50DB8 /* LaunchScreen.storyboard */,
 				27BD26372068631200A50DB8 /* Info.plist */,
@@ -226,7 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27BD262E2068631200A50DB8 /* ViewController.swift in Sources */,
+				27BD26422068855E00A50DB8 /* ViewControllerCinema.swift in Sources */,
 				27BD262C2068631200A50DB8 /* AppDelegate.swift in Sources */,
+				27BD264020686FFB00A50DB8 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
