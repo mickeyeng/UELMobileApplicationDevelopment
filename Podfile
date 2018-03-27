@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+ # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
 target 'myMovie2' do
@@ -8,5 +8,6 @@ target 'myMovie2' do
   # Pods for myMovie2
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end

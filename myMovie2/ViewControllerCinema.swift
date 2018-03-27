@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewControllerCinema: UIViewController {
 
@@ -32,4 +33,41 @@ class ViewControllerCinema: UIViewController {
     }
     */
 
+    @IBAction func greenwichButton(_ sender: UIButton) {
+        
+        // defiing greenwich cinema destination
+        let latitude:CLLocationDegrees = 51.490800
+        let longitude:CLLocationDegrees = 0.012775
+        
+        let regionDistance:CLLocationDistance = 1000;
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        
+//        set region of the map
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        
+        
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        
+        let placemark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "Greenwich Odeon"
+        mapItem.openInMaps(launchOptions: options)
+        
+        
+        
+        
+    }
+    
+    @IBAction func backToMenuButton(_ sender: UIButton) {
+         performSegue(withIdentifier: "segueMenu", sender: self)
+    }
+    
+    
+    
+    
+    @IBAction func tableViewBtb(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueToTable", sender: self)
+    }
+    
+    
 }

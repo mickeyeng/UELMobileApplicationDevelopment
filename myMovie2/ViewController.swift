@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
@@ -20,10 +20,29 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        self.emailInput.delegate = self
+        self.passwordInput.delegate = self
+        
+        
+        
         // sets the title of the button
         loginButton.setTitle("Enter", for: UIControlState.normal)
         
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    
+    // hide the keyboard when the user presses away from the keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    // hide the keyboard when the user presses return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +59,7 @@ class ViewController: UIViewController {
                     if user != nil {
                         // user sucessfully signs in
                         print("Sucessfully signed in!")
+                      
                         self.performSegue(withIdentifier: "segue", sender: self)
                     } else {
                         

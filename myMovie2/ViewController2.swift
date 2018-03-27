@@ -46,4 +46,9 @@ class ViewController2: UIViewController {
     @IBAction func cinemaButton(_ sender: UIButton) {
         performSegue(withIdentifier: "segueCinema", sender: self)
     }
+    
+    @IBAction func movieButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueMovie", sender: self)
+    }
+    
 }
