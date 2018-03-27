@@ -16,7 +16,13 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var inputMovieName: UITextField!
     @IBOutlet weak var inputMovieGenre: UITextField!
     
-     @IBOutlet weak var sucessLabel: UILabel!
+    @IBOutlet weak var inputMovieDescription: UITextField!
+    
+    
+    @IBOutlet weak var inputMovieRating: UITextField!
+    
+    
+    @IBOutlet weak var sucessLabel: UILabel!
     
     var refMovies: DatabaseReference!
     
@@ -42,7 +48,9 @@ class MovieViewController: UIViewController {
         let movies = [
             "id":key,
             "movieName": inputMovieName.text! as String,
-            "movieGenre": inputMovieGenre.text! as String
+            "movieGenre": inputMovieGenre.text! as String,
+            "movieDescription": inputMovieGenre.text! as String,
+            "movieRating": inputMovieGenre.text! as String
         ]
         
         sucessLabel.text = "Artist added! "
@@ -72,6 +80,10 @@ class MovieViewController: UIViewController {
     
     @IBAction func backBtnMovie(_ sender: UIButton) {
         performSegue(withIdentifier: "segueMovieBack", sender: self)
+    }
+    
+    @IBAction func showMoviesBtn(_ sender: UIButton) {
+         performSegue(withIdentifier: "segueToMovies", sender: self)
     }
     
 }
